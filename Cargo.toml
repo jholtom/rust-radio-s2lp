@@ -5,22 +5,6 @@ version = "0.1.0"
 authors = ["Ryan Kurte <ryankurte@gmail.com>"]
 
 [dependencies]
-embedded-hal = { version = "0.2.2", features = ["unproven"] }
+embedded-hal = { version = "*", features = ["unproven"] }
 nb = "0.1.1"
-radio = { path = "../rust-radio" }
-remote-hal = "0.5.0"
-
-[dev-dependencies]
-embedded-hal-mock = { version = "0.5.0" }
-remote-hal = "0.5.0"
-tokio = "0.1.18"
-futures = "0.1.25"
-linux-embedded-hal = "0.2.2"
-simplelog = "0.5.3"
-
-[patch.crates-io]
-embedded-hal-mock = { git = "https://github.com/ryankurte/embedded-hal-mock", branch = "feature/pins" }
-embedded-hal = { git = "https://github.com/rust-embedded/embedded-hal" }
-
-#embedded-hal-mock = { path = "../embedded-hal-mock" }
-remote-hal = { path = "../rust-remote-hal" }
+radio = "*"
